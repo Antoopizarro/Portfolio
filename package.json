@@ -1,0 +1,24 @@
+{
+  "name": "ejstailwindtemplate",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start" : "concurrently --kill-others \"npm run tailwind\" \"npm run dev\"",
+    "dev": "node ./src/bin/www",
+    "tailwind": "npx tailwindcss -i ./public/styles/main.css -o ./public/styles/tailwind.css --watch"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3"
+  }
+}

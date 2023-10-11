@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cuadroColores {
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.cuadroColores:hover {
+    opacity: 0.85;
+    border-radius: 100%;
+}
