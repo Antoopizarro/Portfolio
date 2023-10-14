@@ -1,24 +1,181 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/styles/main.css' />
-    <link rel='stylesheet' href='/styles/tailwind.css' />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/tailwind.css" />
+    <script src="https://kit.fontawesome.com/63f06e08bb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="bg-[#F0F0F0] font-custom text-[#A17AC8">
+    <!-- Main navigation container -->
+    <nav
+      class="relative flex w-full flex-nowrap items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:flex-wrap lg:justify-start lg:py-4"
+      data-te-navbar-ref>
+      <div class="flex w-full flex-wrap items-center justify-between px-3">
+        <!-- Hamburger button for mobile view -->
+        <button
+          class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+          type="button"
+          data-te-collapse-init
+          data-te-target="#navbarSupportedContent8"
+          aria-controls="navbarSupportedContent8"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <!-- Hamburger icon -->
+          <span class="[&>svg]:w-7">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="h-7 w-7">
+              <path
+                fill-rule="evenodd"
+                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                clip-rule="evenodd"/>
+            </svg>
+          </span>
+        </button>
 
-      <div class="flex flex-col rounded-md p-20 bg-black items-center justify-center gap-2
-      w-[500px] ml-10 mt-10">
-        <div class="text-white font-bold">Tailwind funciona</div>
-        <div class="flex gap-5">
-          <div class="bg-blue-500 p-10 cuadroColores"></div>
-          <div class="bg-purple-500 p-10 cuadroColores"></div>
-          <div class="bg-yellow-500 p-10 cuadroColores"></div>
+        <!-- Collapsible navbar container -->
+        <div
+          class="!visible mt-2 hidden flex-grow basis-[100%] items-center justify-center lg:mt-0 lg:!flex lg:basis-auto"
+          id="navbarSupportedContent8"
+          data-te-collapse-item>
+          <!-- Left links -->
+          <ul
+            class="list-style-none flex flex-col pl-0 lg:mt-1 lg:flex-row"
+            data-te-navbar-nav-ref>
+            <!-- Home link -->
+            <li class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1" data-te-nav-item-ref>
+              <a
+                class="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                aria-current="page"
+                href="#inicio"
+                data-te-nav-link-ref
+                >Sobre mi</a>
+            </li>
+            <!-- Link -->
+            <li class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
+              <a
+                class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#2"
+                data-te-nav-link-ref
+                >Experiencia</a>
+            </li>
+            <!-- Dropdown link -->
+            <li
+              class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
+              data-te-nav-item-ref
+              data-te-dropdown-ref>
+              <!-- Dropdown -->
+              <a
+                class="flex items-center text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#3"
+                type="button"
+                id="dropdownMenuButton2"
+                data-te-dropdown-toggle-ref
+                aria-expanded="false">
+                Proyecto</a>
+              <ul
+                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                aria-labelledby="dropdownMenuButton2"
+                data-te-dropdown-menu-ref>
+              </ul>
+            </li>
+            <!-- Disabled link -->
+            <li class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-link-ref>
+              <a href="#4"
+                class="text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                >Contacto</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
 
-      <div class="absolute top-[230px] left-[450px]">
-        <img class="rounded-3xl shadow-xl" src="/images/si.jpg" alt="si" width="200" height="200">
+  <div class="flex flex-col text-center text-[#575757] mt-10">
+    <h1 id="inicio" class="text-7xl">Antonella Lujan Pizarro</h1>
+    <h2 class="mb-5 text-5xl">Programadora Front-end</h2>
+  </div>
+
+    <div class="flex flex-row justify-center float-left mt-20">
+      <img class="drop-shadow-2xl ml-5" src="/images/persona.jpg" alt="persona"/>
+    </div>
+
+    <section class="animate-pulse">
+    <p class="flex flex-row justify-center p-10 mt-20 text-2xl text-[#575757]">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe officia
+      reprehenderit cupiditate quam molestiae, illo similique fuga consequuntur
+      recusandae accusamus dolorem, beatae voluptates natus quas hic aliquam
+      debitis, iusto nisi!
+    </p>
+    <div class="flex justify-end mr-20 p-5 cursor-pointer">
+      <a  href="https://www.dropbox.com/scl/fi/jmfchsbftq4fwxo9805tx/Damian-Duarte-cv.pdf?rlkey=yoxp9dc1phjrxsxp2qfh708m8&dl=0" class="bg-[#2B2B2B] hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+       Descargar CV
+      </a>
+    </div>
+  </section>
+
+<section class="mt-80 ">   
+      <!-- <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"> -->
+      <div id="2" class="px-6 py-4">
+        <div class="font-bold text-xl mb-2 text-[#A17AC8]">Experiencia</div>
+        <p>
+          Soy programadora Full-stack especializandome en Front-end.
+          Estudiante de Diseño Gráfico.
+        </p>
+        <ul>Software:
+          <li>Office:
+            <li>Word</li>
+            <li>Excel</li>
+            <li>PowerPoint</li>
+            <li>Figma</li>
+            <li>Trello</li>
+            <li>Canva</li>
+          </li>
+          <li>Adobe: 
+            <li>Illustrator</li>
+            <li>Photoshop</li> 
+        </li>
+          <li>Visual Studio Code</li>
+          <li>MySQLWorkBench</li>
+        </ul>
+        <ul>Tecnología:
+          <li>Javascript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>NodeJS</li>
+          <li>MySQL</li>
+          <li>React</li>
+        </ul>
       </div>
+   
+      <div id="3" class="px-6 py-4">
+        <div class="font-bold text-xl mb-2 text-[#A17AC8]">Proyecto</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+
+      <div id="4" class="px-6 py-4">
+        <div class="font-bold text-xl mb-2 text-[#A17AC8]">Contacto</div>
+        <p >
+          <i class="fa-brands fa-whatsapp"></i>1156366982
+          antonellapizarro2@hotmail.com
+        </p>
+      </div> 
+  </section>
+   
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <a class="flex justify-end cursor-pointer" href="#inicio">Ir arriba</a>
   </body>
 </html>
